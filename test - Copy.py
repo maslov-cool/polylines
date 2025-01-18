@@ -57,6 +57,7 @@ class Lines:
                         A = self.path(self.red[-1][0], self.red[-1][1], cell[0], cell[1])[::-1]
                         clock = pygame.time.Clock()
                         for i in range(len(A) - 2):
+                            pygame.display.flip()
                             self.board[A[i][0]][A[i][1]] = 0
                             self.board[A[i + 1][0]][A[i + 1][1]] = 2
                             self.render(screen)
