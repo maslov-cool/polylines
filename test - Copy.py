@@ -66,6 +66,7 @@ class Lines:
                         self.board[A[-1][0]][A[-1][1]] = 1
                         clock.tick(4)
                         pygame.display.flip()
+                        del self.red[0]
         elif self.board[cell[0]][cell[1]] == 1:
             self.board[cell[0]][cell[1]] = 2
             self.red.append([cell[0], cell[1]])
@@ -190,3 +191,4 @@ if __name__ == '__main__':
         pygame.display.flip()
     # завершение работы:
     pygame.quit()
+
